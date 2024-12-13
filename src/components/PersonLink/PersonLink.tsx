@@ -10,15 +10,11 @@ export const PersonLink: React.FC<Props> = ({ person }) => {
   const { name, slug, sex } = person;
 
   return (
-    <tr data-cy="person">
-      <td>
-        <Link
-          to={`/people/${slug}`}
-          className={sex === 'f' ? 'has-text-danger' : ''}
-        >
-          {name}
-        </Link>
-      </td>
-    </tr>
+    <Link
+      to={`/people/${slug}`}
+      className={sex === 'f' ? 'has-text-danger' : ''}
+    >
+      {name}
+    </Link>
   );
 };

@@ -23,9 +23,7 @@ export const PeopleTable: React.FC = () => {
 
       setPeopleData(data);
     } catch {
-      {
-        setError('Data loading error');
-      }
+      setError('Data loading error');
     } finally {
       setIsLoading(false);
     }
@@ -34,8 +32,6 @@ export const PeopleTable: React.FC = () => {
   useEffect(() => {
     fetchPeopleData();
   }, []);
-
-  console.log(peopleData);
 
   return (
     <div className="block">
